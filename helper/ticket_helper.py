@@ -42,6 +42,8 @@ def request_sail_ticket(request_param, show_available_only=False):
     while cnt < 3:
         try:
             response = requests.request("POST", url, headers=headers, data=payload, timeout=3)
+            if response.content == None:
+                return None
             result = message_process(json.loads(response.content), show_available_only)
             return result
         except requests.exceptions.Timeout:

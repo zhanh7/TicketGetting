@@ -10,7 +10,20 @@ import json
 def bark_push(token: str, title: str, content):
     if token == "":
         return
-
+    if content == None:
+        
+        payload = json.dumps({
+            "title": title,
+            "body": "没票"
+        })
+        
+        url = f"https://api.day.app/{token}"
+        
+        headers = {
+            'Content-Type': 'application/json'
+        }
+        requests.request("POST", url, headers=headers, data=payload)
+        
     for ship in content:
         shipContent = beautify_results(ship)
         url = f"https://api.day.app/{token}"

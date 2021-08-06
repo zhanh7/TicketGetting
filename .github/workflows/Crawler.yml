@@ -6,7 +6,7 @@ name: Crawler
 on:
   push:
   schedule:
-  - cron: "*/1 * * * *"
+  - cron: "*/5 * * * *"
   workflow_dispatch:
     inputs:
       ssh:

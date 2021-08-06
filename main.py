@@ -52,6 +52,8 @@ if __name__ == '__main__':
             elif ret == -1:
                 print(f'{date}:爬取失败')
             else:
+                if enable_bark:
+                    bark_push(token=bark_token, title="船票Get", content=ret)
                 print(f'{date}:没有可用的船票')
         if enable_gh_action:
             break

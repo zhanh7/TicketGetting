@@ -23,7 +23,7 @@ sct_token = ""  # Sendkey
 # Ticket Stuff
 startSite = "SK"  # 始发站点
 endSite = "HKA"  # 目标站点
-startDate = "2021-08-07"  # 船票搜索日期
+startDate = "2021-08-27"  # 船票搜索日期
 endDate = "2021-08-27"
 show_available_only = True  # 只显示有票的日期
 # ==================================

@@ -23,6 +23,7 @@ def bark_push(token: str, title: str, content):
             'Content-Type': 'application/json'
         }
         requests.request("POST", url, headers=headers, data=payload)
+        return
         
     for ship in content:
         shipContent = beautify_results(ship)
